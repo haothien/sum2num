@@ -46,7 +46,7 @@ public class MyBigNumber{
             }
             gtd = sum1_2 / 10;
         }
-        StringBuffer stringBuffer = new StringBuffer(result);// fix loi result bi dao nguoc sau khi thuc hien phep tin
+        StringBuffer stringBuffer = new StringBuffer(result);
 	String resultrv =  stringBuffer.reverse().toString();
 	
 	
