@@ -1,5 +1,5 @@
 You have 2 ways to run the program:
-1. Using file MyBigMain.jar :
+1. Using MyBigMain.jar :
 
 -Download and save only MyBigMain.jar to your computer
 
@@ -10,7 +10,7 @@ You have 2 ways to run the program:
                     java -jar "MyBigMain.jar" 
 
 
-2. Using files MyBigNumber.java and MyBigMain.java :
+2. Using MyBigNumber.java and MyBigMain.java :
 
 -Download 2 files MyBigNumber.java and MyBigMain.java
 
@@ -22,6 +22,6 @@ You have 2 ways to run the program:
 
                   javac MyBigMain.java
                   
-                  java MyBigMain sum2num(a,b) 
+                  java MyBigMain  
                   
-* a , b are the numbers that you want to compute sum .
+
