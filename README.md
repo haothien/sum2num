@@ -1,1 +1,1 @@
-I used Netbean to open then run the MyBigMain.java . It will uses automatically the class MyBigNumber.java to take from user 2 string of numbers and compute the sum, then the result will be shown on the console
+We will use Netbeans IDE to open and run the MyBigMain.java . It will uses automatically the class MyBigNumber.java to take 2 strings of numbers from user and compute the sum, then the result will be shown on the console.
