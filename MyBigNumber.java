@@ -1,4 +1,13 @@
-    public static String MyBigNumber(String s1, String s2) {
+    
+public class MyBigNumber{
+
+    /**
+     *
+     * @param s1
+     * @param s2
+     * @return
+     */
+    public static String sum2num(String s1, String s2) {
         int str1 = s1.length(); 
         int str2 = s2.length();
         int max = str1;
@@ -21,16 +30,25 @@
             if (vtc2 >= 0) {
                 digit2 = s2.charAt(vtc2); //Lay ki tu cuoi day gan vao bien digit2
             }
-			int temp1 = digit1 - '0';
-			int temp2 = digit2 - '0';
-            int sum1_2 = temp1 + temp2 + gtd; //tong 2 ki tu duoc lay ra
+			
             
-            if (num1 > 0) { 
+            int temp1 = digit1 - '0';
+            int temp2 = digit2 - '0';
+			
+            int sum1_2 = temp2 + temp1 + gtd; //tong 2 ki tu duoc lay ra
+            
+            if (vtc1 > 0) { 
                 result += (sum1_2 % 10);
             } else {        //khi tro ve ki tu cuoi cung cua chuoi
                 result += sum1_2;
             }
             gtd = sum1_2 / 10;
         }
-        return result;
+        StringBuffer stringBuffer = new StringBuffer(result);
+	String resultrv =  stringBuffer.reverse().toString();
+	
+	
+        return resultrv;
+        
     }
+}
