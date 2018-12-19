@@ -2,7 +2,7 @@ You have 2 ways to run the program:
 
 1. Using MyBigMain.jar :
 
--Download and save only MyBigMain.jar to your computer and run
+      Download only MyBigMain.jar to your computer and run
 
 
 2. Using MyBigNumber.java and MyBigMain.java :
