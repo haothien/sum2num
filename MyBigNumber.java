@@ -1,12 +1,14 @@
-    
+/**
+* 
+* Description:
+* Class MyBigNumber chứa hàm cộng 2 chuỗi.
+* Hàm sum2num sẽ thực hiện chức năng cộng 2 số lấy từ 2 chuỗi.
+*/    
+
+
 public class MyBigNumber{
 
-    /**
-     *
-     * @param s1
-     * @param s2
-     * @return
-     */
+    
     public static String sum2num(String s1, String s2) {
         int str1 = s1.length(); 
         int str2 = s2.length();
@@ -44,7 +46,7 @@ public class MyBigNumber{
             }
             gtd = sum1_2 / 10;
         }
-        StringBuffer stringBuffer = new StringBuffer(result);
+        StringBuffer stringBuffer = new StringBuffer(result);// fix loi result bi dao nguoc sau khi thuc hien phep tin
 	String resultrv =  stringBuffer.reverse().toString();
 	
 	
