@@ -1,13 +1,8 @@
 You have 2 ways to run the program:
+
 1. Using MyBigMain.jar :
 
--Download and save only MyBigMain.jar to your computer
-
--Open CMD and direct to the folder saving MyBigMain.jar
-
--To run the program ,type the following :
-
-                    java -jar "MyBigMain.jar" 
+-Download and save only MyBigMain.jar to your computer and run
 
 
 2. Using MyBigNumber.java and MyBigMain.java :
