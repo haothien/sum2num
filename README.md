@@ -1,6 +1,6 @@
-You have 2 ways to run the program:
 
-1. Using MyBigMain.jar :
+
+
 
 -Download only MyBigMain.jar to your computer and run
 
@@ -9,7 +9,7 @@ You have 2 ways to run the program:
 
 
 
-2. Using MyBigNumber.java and MyBigMain.java :
+
 
 -Download 2 files MyBigNumber.java and MyBigMain.java
 
