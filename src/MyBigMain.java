@@ -17,14 +17,14 @@ public class MyBigMain {
         MyBigMain main = new MyBigMain();
         MyBigNumber num = new MyBigNumber();
 
-        System.out.print("Nhập số đầu: ");
+        System.out.print("Nhap so dau: ");
         String str1 = scanner.next();
 
-        System.out.print("Nhập số thứ hai: ");
+        System.out.print("Nhap so thu hai: ");
         String str2 = scanner.next();
 
-        System.out.println("Kết quả phép cộng là " + num.sum2num(str1, str2));
+        System.out.println("Ket qua phep cong la " + num.sum2num(str1, str2));
     }
-
     
+
 }
