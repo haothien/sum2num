@@ -23,7 +23,7 @@ public class MyBigMain {
         System.out.print("Nhap so thu hai: ");
         String str2 = scanner.next();
 
-        System.out.println("Ket qua phep cong la " + num.sum2num(str1, str2));
+        System.out.println("Ket qua phep cong : " + num.sum(str1, str2));
     }
     
 
