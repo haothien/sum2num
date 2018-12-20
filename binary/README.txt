@@ -1,7 +1,7 @@
 
 You can run the program immediately after download MyBigMain.jar.
 
-* Feature : 
+* How this program works ? : 
 - You enter the first and the second number into the boxes.
 - Then you press the button SUM , you will get the result of sum that 2 numbers.
 - On the right side , it will shows the process steps.
