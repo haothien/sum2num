@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class MyBigMain {
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         MyBigMain main = new MyBigMain();
         MyBigNumber num = new MyBigNumber();
@@ -25,6 +25,5 @@ public class MyBigMain {
 
         System.out.println("Ket qua phep cong : " + num.sum(str1, str2));
     }
-    
 
 }
