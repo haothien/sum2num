@@ -1,12 +1,24 @@
     
 public class MyBigNumber{
+    
+    
+    
+    public MyBigNumber(){
+    
+    }
+    
+    
 
     
-    public static String sum2num(String s1, String s2) {
+    public String sum2num(String s1, String s2) {
         int str1 = s1.length(); 
         int str2 = s2.length();
         int max = str1;
+        int sum1_2 = 0;
+        int rem = 0;
+        
         String result = "";
+        String step = "";
         if (str1 > str2) { // lay gia tri max sau khi so sanh do dai 2 chuoi
             max = str1;
         } else {
@@ -30,20 +42,41 @@ public class MyBigNumber{
             int temp1 = digit1 - '0';
             int temp2 = digit2 - '0';
 			
-            int sum1_2 = temp2 + temp1 + gtd; //tong 2 ki tu duoc lay ra
-            
-            if (vtc1 > 0) { 
-                result += (sum1_2 % 10);
-            } else {        //khi tro ve ki tu cuoi cung cua chuoi
-                result += sum1_2;
+            sum1_2 = temp2 + temp1; //tong 2 ki tu duoc lay ra
+            int write = (sum1_2 + rem) % 10;
+            if (sum1_2 < 9){
+                gtd = sum1_2 / 10;
+                
             }
-            gtd = sum1_2 / 10;
+            if(max == 1){
+                step += "\n" + " Lay " + temp1 + " cong voi " + temp2 
+                + " bang " + sum1_2 + "\n";
+            } else if ( i != 0){
+                step += "\n" + " Buoc " + (i + 1) + ":\n" + " Lay " + temp1
+                        + " cong voi " + temp2
+                        + " duoc " + sum1_2 + "\n"
+                        + " Cong them so nho " + rem
+                        + " ta duoc " + ( sum1_2 + rem ) + " \n "
+                        + " Ghi " + write
+                        + " nho " + gtd + "\n";
+                
+                
+            } else {
+                step += "\n" + "Buoc " + (i + 1) + " :\n"
+                        + "Lay " + temp1
+                        + " cong " + temp2
+                        + " duoc " + sum1_2 + "\n"
+                        + "Ghi " + write
+                        + " nho " + gtd + "\n";
+            }
+            rem = sum1_2 / 10 ;
+            result = write + result ;
         }
-        StringBuffer stringBuffer = new StringBuffer(result);
-	String resultrv =  stringBuffer.reverse().toString();
-	
-	
-        return resultrv;
+        if(gtd != 0){
+            result = gtd + result;
+        }
+        System.out.println(step);
         
-    }
+        return result;
+}
 }
