@@ -189,6 +189,24 @@ public class MyBigMainUI extends javax.swing.JFrame {
         String loi = " Da nhap dung cu phap ! ";
         String s1 = jTextField1.getText();
         String s2 = jTextField2.getText();
+        int str1 = s1.length();// bien luu do dai chuoi thu 1
+        int str2 = s2.length();// bien luu do dai chuoi thu 2
+        int max = str1;// bien luu gia tri max
+        int sum12 = 0;// bien tong
+        int check = 0;// bien check loi
+        String result = "";// chuoi luu ket qua tam thoi
+        String fresult = "";// chuoi luu ket qua cuoi cung
+        String step = "";// chuoi luu cac buoc cua phep tinh
+        int rem = 0;// bien luu ki tu so nho se duoc them vao tiep theo
+        int gtd = 0; // bien gia tri du(so nho)
+        int temp1 = 0;// bien tam 1
+        int temp2 = 0;// bien tam 2
+        int write = 0;// bien nho
+        int vtc1 = 0;// vi tri cuoi cung cua chuoi so 1
+        int vtc2 = 0;// vi tri cuoi cung cua chuoi so 2
+        char digit1 = '0';// bien luu ki tu khi duoc lay ra 
+        char digit2 = '0';// bien luu ki tu khi duoc lay ra
+
         try {
 
             if (!s1.matches("^[0-9]+$") || !s2.matches("^[0-9]+$")) {
@@ -196,18 +214,19 @@ public class MyBigMainUI extends javax.swing.JFrame {
                 throw new NumberFormatException(" Khong nhap ki tu chu hoac so am ! ");
             }
         } catch (NumberFormatException ex) {
+            check = 1;
             loi = " Nhap sai vui long nhap lai ! ";
 
         }
 
-        int sum1_2 = 0;
-        int rem = 0;
+        sum12 = 0;
+        rem = 0;
 
-        String result = "";
-        String step = "";
-        int str1 = s1.length();
-        int str2 = s2.length();
-        int max = str1;
+        result = "";
+        step = "";
+        str1 = s1.length();
+        str2 = s2.length();
+        max = str1;
 
         if (str1 > str2) { // lay gia tri max sau khi so sanh do dai 2 chuoi
             max = str1;
@@ -215,12 +234,12 @@ public class MyBigMainUI extends javax.swing.JFrame {
             max = str2;
         }
 
-        int gtd = 0; //bien gia tri du
+        gtd = 0; //bien gia tri du
         for (int i = 0; i < max; i++) {
-            int vtc1 = str1 - i - 1;//vi tri cuoi cung cua chuoi so 1,2
-            int vtc2 = str2 - i - 1;
-            char digit1 = '0';//bien luu ki tu khi duoc lay ra 
-            char digit2 = '0';
+            vtc1 = str1 - i - 1;//vi tri cuoi cung cua chuoi so 1,2
+            vtc2 = str2 - i - 1;
+            digit1 = '0';//bien luu ki tu khi duoc lay ra 
+            digit2 = '0';
             if (vtc1 >= 0) {
                 digit1 = s1.charAt(vtc1); //Lay ki tu cuoi day gan vao bien digit1
             }
@@ -228,25 +247,25 @@ public class MyBigMainUI extends javax.swing.JFrame {
                 digit2 = s2.charAt(vtc2); //Lay ki tu cuoi day gan vao bien digit2
             }
 
-            int temp1 = digit1 - '0';
-            int temp2 = digit2 - '0';
+            temp1 = digit1 - '0';
+            temp2 = digit2 - '0';
 
-            sum1_2 = temp2 + temp1; //tong 2 ki tu duoc lay ra
+            sum12 = temp2 + temp1; //tong 2 ki tu duoc lay ra
 
-            int write = (sum1_2 + rem) % 10;
-            if (sum1_2 < 9) {
-                gtd = sum1_2 / 10;
+            write = (sum12 + rem) % 10;
+            if (sum12 < 9) {
+                gtd = sum12 / 10;
 
             }
             if (max == 1) {
                 step += "\n" + " Lay " + temp1 + " cong tiep voi " + temp2
-                        + " bang " + sum1_2 + "\n";
+                        + " bang " + sum12 + "\n";
             } else if (i != 0) {
                 step += "\n" + " Buoc " + (i + 1) + ":\n" + " Lay " + temp1
                         + " cong voi " + temp2
-                        + " duoc " + sum1_2 + "\n"
+                        + " duoc " + sum12 + "\n"
                         + " Cong them so nho " + rem
-                        + " ta duoc " + (sum1_2 + rem) + " \n "
+                        + " ta duoc " + (sum12 + rem) + " \n "
                         + " Ghi " + write
                         + " nho " + gtd + "\n";
 
@@ -254,11 +273,11 @@ public class MyBigMainUI extends javax.swing.JFrame {
                 step += "\n" + "Buoc " + (i + 1) + " :\n"
                         + "Lay " + temp1
                         + " cong " + temp2
-                        + " duoc " + sum1_2 + "\n"
+                        + " duoc " + sum12 + "\n"
                         + " Ghi " + write
                         + " nho " + gtd + "\n";
             }
-            rem = sum1_2 / 10;
+            rem = sum12 / 10;
             result = write + result;
         }
         if (gtd != 0) {
@@ -266,7 +285,7 @@ public class MyBigMainUI extends javax.swing.JFrame {
         }
 
         jTextArea2.setText(String.valueOf(loi));
-        if (loi.equals(" Da nhap dung cu phap ! ")) {
+        if (check == 0) {
 
             jTextArea1.setText(String.valueOf(step));
 
