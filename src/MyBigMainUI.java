@@ -34,13 +34,8 @@ public class MyBigMainUI extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jTextField4 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
@@ -86,14 +81,6 @@ public class MyBigMainUI extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
-
-        jLabel4.setText("Result");
-
-        jLabel5.setText("System notification");
-
         jLabel6.setText("Process step");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -106,71 +93,50 @@ public class MyBigMainUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 4, Short.MAX_VALUE)
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton2))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel2)
-                                                .addGap(22, 22, 22))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jLabel3)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
-                                            .addComponent(jTextField2)))
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22))
+                                .addComponent(jLabel2)
+                                .addGap(22, 22, 22))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
+                            .addComponent(jTextField2))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton2))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(160, 160, 160))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addGap(97, 97, 97))
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(182, 182, 182)
+                        .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(161, 161, 161)
+                        .addComponent(jLabel1)))
+                .addGap(0, 181, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addGap(4, 4, 4)
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(jButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(19, 19, 19)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -181,116 +147,18 @@ public class MyBigMainUI extends javax.swing.JFrame {
         jTextField1.setText("");
         jTextField2.setText("");
         jTextArea1.setText("");
-        jTextField4.setText("");
-        jTextArea2.setText("");
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String loi = " Da nhap dung cu phap ! ";
+        
         String s1 = jTextField1.getText();
         String s2 = jTextField2.getText();
-        int str1 = s1.length();// bien luu do dai chuoi thu 1
-        int str2 = s2.length();// bien luu do dai chuoi thu 2
-        int max = str1;// bien luu gia tri max
-        int sum12 = 0;// bien tong
-        int check = 0;// bien check loi
-        String result = "";// chuoi luu ket qua tam thoi
-        String fresult = "";// chuoi luu ket qua cuoi cung
-        String step = "";// chuoi luu cac buoc cua phep tinh
-        int rem = 0;// bien luu ki tu so nho se duoc them vao tiep theo
-        int gtd = 0; // bien gia tri du(so nho)
-        int temp1 = 0;// bien tam 1
-        int temp2 = 0;// bien tam 2
-        int write = 0;// bien nho
-        int vtc1 = 0;// vi tri cuoi cung cua chuoi so 1
-        int vtc2 = 0;// vi tri cuoi cung cua chuoi so 2
-        char digit1 = '0';// bien luu ki tu khi duoc lay ra 
-        char digit2 = '0';// bien luu ki tu khi duoc lay ra
+        MyBigNumber num = new MyBigNumber();
 
-        try {
+        jTextArea1.setText(String.valueOf(num.sum(s1, s2)));
 
-            if (!s1.matches("^[0-9]+$") || !s2.matches("^[0-9]+$")) {
 
-                throw new NumberFormatException(" Khong nhap ki tu chu hoac so am ! ");
-            }
-        } catch (NumberFormatException ex) {
-            check = 1;
-            loi = " Nhap sai vui long nhap lai ! ";
-
-        }
-
-        sum12 = 0;
-        rem = 0;
-
-        result = "";
-        step = "";
-        str1 = s1.length();
-        str2 = s2.length();
-        max = str1;
-
-        if (str1 > str2) { // lay gia tri max sau khi so sanh do dai 2 chuoi
-            max = str1;
-        } else {
-            max = str2;
-        }
-
-        gtd = 0; //bien gia tri du
-        for (int i = 0; i < max; i++) {
-            vtc1 = str1 - i - 1;//vi tri cuoi cung cua chuoi so 1,2
-            vtc2 = str2 - i - 1;
-            digit1 = '0';//bien luu ki tu khi duoc lay ra 
-            digit2 = '0';
-            if (vtc1 >= 0) {
-                digit1 = s1.charAt(vtc1); //Lay ki tu cuoi day gan vao bien digit1
-            }
-            if (vtc2 >= 0) {
-                digit2 = s2.charAt(vtc2); //Lay ki tu cuoi day gan vao bien digit2
-            }
-
-            temp1 = digit1 - '0';
-            temp2 = digit2 - '0';
-
-            sum12 = temp2 + temp1; //tong 2 ki tu duoc lay ra
-
-            write = (sum12 + rem) % 10;
-            if (sum12 < 9) {
-                gtd = sum12 / 10;
-
-            }
-            if (max == 1) {
-                step += "\n" + " Lay " + temp1 + " cong tiep voi " + temp2
-                        + " bang " + sum12 + "\n";
-            } else if (i != 0) {
-                step += "\n" + " Buoc " + (i + 1) + ":\n" + " Lay " + temp1
-                        + " cong voi " + temp2
-                        + " duoc " + sum12 + "\n"
-                        + " Cong them so nho " + rem
-                        + " ta duoc " + (sum12 + rem) + " \n "
-                        + " Ghi " + write
-                        + " nho " + gtd + "\n";
-
-            } else {
-                step += "\n" + "Buoc " + (i + 1) + " :\n"
-                        + "Lay " + temp1
-                        + " cong " + temp2
-                        + " duoc " + sum12 + "\n"
-                        + " Ghi " + write
-                        + " nho " + gtd + "\n";
-            }
-            rem = sum12 / 10;
-            result = write + result;
-        }
-        if (gtd != 0) {
-            result = gtd + result;
-        }
-
-        jTextArea2.setText(String.valueOf(loi));
-        if (check == 0) {
-
-            jTextArea1.setText(String.valueOf(step));
-
-            jTextField4.setText(String.valueOf(result));
-        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -339,15 +207,10 @@ public class MyBigMainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }
