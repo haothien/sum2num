@@ -10,12 +10,12 @@
  */
 import java.util.Scanner;
 
-public class MyBigMain {
+public class MyBigMain implements IObserver{
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        MyBigMain main = new MyBigMain();
-        MyBigNumber num = new MyBigNumber();
+        MyBigMain myBigMain = new MyBigMain();
+        MyBigNumber num = new MyBigNumber( myBigMain);
 
         System.out.print("Nhap so dau: ");
         String str1 = scanner.next();
@@ -23,7 +23,10 @@ public class MyBigMain {
         System.out.print("Nhap so thu hai: ");
         String str2 = scanner.next();
 
-        System.out.println("Thuc hien phep cong " + num.sum(str1, str2));
+        System.out.println("Ket qua phep cong " + num.sum(str1, str2));
+    }
+    public void sendStep(String str) {
+        System.out.println(str);
     }
 
 }
