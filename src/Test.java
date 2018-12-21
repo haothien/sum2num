@@ -5,7 +5,7 @@ public class Test {
     MyBigNumber myBigNumber = new MyBigNumber();
 
     @org.junit.Test
-    public void sum() {
+    public void sum1() {
         try {
             String s = myBigNumber.sum("123", "456");
             assertEquals("579", s);
