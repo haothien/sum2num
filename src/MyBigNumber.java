@@ -1,3 +1,4 @@
+
 /**
  * Sum two string class.
  */
@@ -6,7 +7,7 @@ public class MyBigNumber {         // khai bao class MyBigNumber
     /**
      * Sum two string function.
      */
-    public String sum(final String s1,final String s2) {
+    public String sum(final String s1, final String s2) {
 
         int str1 = s1.length();// bien luu do dai chuoi thu 1
         int str2 = s2.length();// bien luu do dai chuoi thu 2
@@ -43,11 +44,10 @@ public class MyBigNumber {         // khai bao class MyBigNumber
             max = str2;
         }
 
-        
         for (int i = 0; i < max; i++) {
             vtc1 = str1 - i - 1;
             vtc2 = str2 - i - 1;
-            
+
             if (vtc1 >= 0) {
                 digit1 = s1.charAt(vtc1); //Lay ki tu cuoi day gan vao bien digit1
             }
@@ -91,15 +91,13 @@ public class MyBigNumber {         // khai bao class MyBigNumber
             result = gtd + result;
         }
         if (check == 0) {
-            fresult = result;
-            System.out.println(step);
+            fresult = step + "\n" + " Ta duoc ket qua la " + result;
 
         } else {
-            fresult = "ERROR";
-            System.out.println(loi);
+            fresult = "ERROR" + "\n" + loi;
+
         }
-        
-        
+
         return fresult;
     }
 }
