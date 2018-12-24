@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Main function.
+ * 
+ * 
  */
 
 /**
@@ -10,23 +10,38 @@
  */
 import java.util.Scanner;
 
-public class MyBigMain implements IObserver{
+public class MyBigMain implements IReceiver {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        MyBigMain myBigMain = new MyBigMain();
-        MyBigNumber num = new MyBigNumber( myBigMain);
+        /*
+         * Main function, take number strings from input
+         * 
+         * */
+        String str1 = "";
+        String str2 = "";
+        Scanner sc = new Scanner(System.in);
+        MyBigMain main = new MyBigMain();
+        MyBigNumber num = new MyBigNumber(main);
 
-        System.out.print("Nhap so dau: ");
-        String str1 = scanner.next();
+        try {
+            if (args.length > 0) {
+                str1 = args[0];
+                str2 = args[1];
+            } else {
+                str1 = "0";
+                str2 = "0";
+            }
+            System.out.println("Ta duoc ket qua : " + num.sum(str1, str2) + "\n");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
-        System.out.print("Nhap so thu hai: ");
-        String str2 = scanner.next();
+        sc.close();
 
-        System.out.println("Ket qua phep cong " + num.sum(str1, str2));
     }
-    public void sendStep(String str) {
-        System.out.println(str);
+
+    public void sendStep(String step) {
+        System.out.println(step);
     }
 
 }
