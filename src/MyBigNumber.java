@@ -1,8 +1,7 @@
-
 /**
  * Sum two string class.
  */
-public class MyBigNumber {         // khai bao class MyBigNumber
+public class MyBigNumber {         
 
     private IReceiver receiver;
 
@@ -12,33 +11,33 @@ public class MyBigNumber {         // khai bao class MyBigNumber
     public MyBigNumber(final IReceiver receiver) {
         this.receiver = receiver;
     }
-
+    
     /**
+     * This class is created to sum 2 string numbers.
      * @param s1 first string number.
      * @param s2 second string number.
      * @return string that have the sum number of these 2 strings.
-     *
-     *
      */
+    
     public String sum(final String s1, final String s2) {
 
-        int str1 = s1.length();// bien luu do dai chuoi thu 1
-        int str2 = s2.length();// bien luu do dai chuoi thu 2
+        int str1 = s1.length();                                       // bien luu do dai chuoi thu 1
+        int str2 = s2.length();                                       // bien luu do dai chuoi thu 2
 
-        int sum12 = 0;// bien tong
+        int sum12 = 0;                                                // bien tong
 
-        String result = "";// chuoi luu ket qua tam thoi
-        String step = "";// chuoi luu cac buoc cua phep tinh
+        String result = "";                                           // chuoi luu ket qua tam thoi
+        String step = "";                                             // chuoi luu cac buoc cua phep tinh
 
-        int rem = 0;// bien luu ki tu so nho se duoc them vao tiep theo
-        int gtd = 0; // bien luu gia tri du
-        int write = 0;// bien nho tam
+        int rem = 0;                                                  // bien luu so nho se duoc them vao tiep theo
+        int gtd = 0;                                                  // bien luu gia tri du
+        int write = 0;                                                // bien nho tam
 
-        int digit1;// bien luu ki tu khi duoc lay ra 
-        int digit2;// bien luu ki tu khi duoc lay ra
+        int digit1;                                                   // bien luu ki tu khi duoc lay ra 
+        int digit2;                                                   // bien luu ki tu khi duoc lay ra
 
-        char check;// bien check ki tu 
-        int max = (str1 > str2) ? str1 : str2;// bien luu gia tri max
+        char check;                                                   // bien check ki tu 
+        int max = (str1 > str2) ? str1 : str2;                        // bien luu gia tri max
 
         if (s1.contains("-") || s2.contains("-")) {
 
