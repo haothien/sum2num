@@ -122,7 +122,7 @@ public class Test {
     @org.junit.Test
     public void sum12() {
         try {
-            System.out.println("Testcase 11: ");
+            System.out.println("Testcase 12: ");
             MyBigMain test = new MyBigMain();
             MyBigNumber myBignumber = new MyBigNumber(test);
             String s = myBigNumber.sum("122", "-13");
